@@ -5,6 +5,7 @@
 #include<QSettings>
 #include <QDialog>
 #include <QString>
+#include<QFontDialog>
 
 
 
@@ -28,6 +29,14 @@ private slots:
 
 
 
+
+
+
+
+
+    void on_actionBackgroung_triggered();
+
+    void on_actionFont_triggered();
 
 private:
     Ui::MainWindow *ui;

@@ -6,6 +6,8 @@
 #include<QTextStream>
 #include<QXmlStreamReader>
 #include<QDebug>
+#include<QFontDialog>
+#include<QColorDialog>
 
 
 
@@ -101,11 +103,6 @@ void MainWindow::on_pushButton_clicked()
         }
   file.close();
   ui->textBrowser->setHtml(book);
-
-
-
-
-
 }
 
 
@@ -115,4 +112,42 @@ void MainWindow::on_pushButton_clicked()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void MainWindow::on_actionBackgroung_triggered()
+{
+
+    QColor color = QColorDialog::getColor(Qt::white,this,"Choose Color");
+    if(color.isValid())
+    {
+        ui->textBrowser->setTextBackgroundColor(color);
+     }
+
+}
+
+
+
+
+void MainWindow::on_actionFont_triggered()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok,this);
+    if (ok)
+    {
+        ui->textBrowser->setFont(font);
+    }
+}
 

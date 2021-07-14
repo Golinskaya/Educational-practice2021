@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>753</width>
+    <height>615</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,43 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>20</y>
-      <width>121</width>
-      <height>51</height>
+      <x>490</x>
+      <y>10</y>
+      <width>100</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>50</height>
+     </size>
     </property>
     <property name="text">
      <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QFontComboBox" name="fontComboBox">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>80</y>
+      <width>195</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>50</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Font Selection</string>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser">
@@ -32,8 +61,8 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>631</width>
-      <height>531</height>
+      <width>451</width>
+      <height>611</height>
      </rect>
     </property>
    </widget>
@@ -43,13 +72,47 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>753</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuBackground">
+    <property name="title">
+     <string>Background</string>
+    </property>
+    <addaction name="actionBackgroung"/>
+   </widget>
+   <widget class="QMenu" name="menuFont">
+    <property name="title">
+     <string>Font</string>
+    </property>
+    <addaction name="actionFont"/>
+   </widget>
+   <addaction name="menuBackground"/>
+   <addaction name="menuFont"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionBackgroung">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/new/prefix1/image/background.png</normaloff>:/new/prefix1/image/background.png</iconset>
+   </property>
+   <property name="text">
+    <string>Background</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/new/prefix1/image/text.png</normaloff>:/new/prefix1/image/text.png</iconset>
+   </property>
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
